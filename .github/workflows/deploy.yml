@@ -46,7 +46,7 @@ jobs:
           path: './_site/'
 
   deploy:
-    needs: build_site
+    needs: build
     runs-on: ubuntu-latest
 
     permissions:
