@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: |
           npm install
-
+        
       - name: Build the site
         run: |
           npm run build
@@ -38,12 +38,12 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./my-cv/_site
+          publish_dir: ./_site
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './my-cv/_site/'
+          path: './_site/'
 
   deploy:
     needs: build_site
